@@ -1,20 +1,22 @@
 const express = require("express"),
   app = express(),
   bodyParser = require("body-parser");
-port = process.env.PORT || 3000;
-//port = process.env.PORT || 8080;
+//port = process.env.PORT || 3000;
+port = process.env.PORT || 8080;
 
 const mysql = require("mysql");
 // connection configurations
+/*
 const mc = mysql.createConnection({
   host: "localhost",
   user: "root",
   password: "Edesarankara.13",
   database: "smart-car-park-tobb-etu"
 });
+*/
 
 /* Google Cloud Deployment */
-/*
+
 const mc = mysql.createConnection({
   socketPath:
     "/cloudsql/smart-car-park-api:us-central1:tobb-etu-smart-car-park",
@@ -22,7 +24,6 @@ const mc = mysql.createConnection({
   password: "samaritan",
   database: "smart_car_park_tobb_etu"
 });
-*/
 
 // connect to database
 mc.connect();
